@@ -178,12 +178,13 @@ header.scrolled .navbar li a:hover {
 }
 
 .home-text p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
     line-height: 1.6;
     max-width: 600px;
+    font-weight: 600;
 }
 
 .home-text .btn3 {
@@ -321,10 +322,12 @@ header.scrolled .navbar li a:hover {
 }
 
 .innovator-text p {
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
+    margin: 0.5rem 0 1rem;
     text-align: justify;
     color: #000000;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .about {
@@ -361,6 +364,9 @@ header.scrolled .navbar li a:hover {
     margin: 0.5rem 0 1rem;
     text-align: justify;
     color: #000000;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
 }
 
 .about, .innovator {
@@ -451,9 +457,9 @@ header.scrolled .navbar li a:hover {
 
 .image-description {
     padding: 1rem;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     color: #000000;
-    line-height: 1.5;
+    line-height: 1.6;
     background: white;
     flex-grow: 1;
     display: flex;
@@ -942,6 +948,19 @@ header.scrolled .navbar li a:hover {
         padding: 10px 15px;
         text-align: center;
     }
+
+    .about-text p,
+    .innovator-text p {
+        font-size: 1.2rem;
+    }
+
+    .home-text p {
+        font-size: 1.3rem;
+    }
+
+    .home-text h1 {
+        font-size: 2.4rem;
+    }
 }
 
 @media (max-width: 500px) {
@@ -1146,7 +1165,8 @@ header.scrolled .navbar li a:hover {
 /* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
     .image-description {
-        font-size: 1rem; /* Slightly smaller on mobile but still larger than original */
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 }
 
