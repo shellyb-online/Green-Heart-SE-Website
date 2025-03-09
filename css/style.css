@@ -162,29 +162,29 @@ header.scrolled .navbar li a:hover {
 }
 
 .home-text h1 {
-    font-size: 3.2rem;
+    font-size: 1.5rem;
     color: #ebdbc8;
-    font-weight: bolder;
+    font-weight: normal;
     margin-bottom: 1rem;
     text-align: center;
 }
 
 .home-text h2 {
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-size: 1.4rem;
+    font-weight: normal;
     color: #000000;
     text-transform: uppercase;
     margin: 0.5rem 0 1.4rem;
 }
 
 .home-text p {
-    font-size: 1.6rem;
+    font-size: 1rem;
     color: #ffffff;
     text-align: center;
     margin-bottom: 2rem;
-    line-height: 1.6;
+    line-height: 1.5;
     max-width: 600px;
-    font-weight: 600;
+    font-weight: normal;
 }
 
 .home-text .btn3 {
@@ -282,7 +282,7 @@ header.scrolled .navbar li a:hover {
 }
 
 .heading h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #000000;
 }
 
@@ -325,9 +325,9 @@ header.scrolled .navbar li a:hover {
     margin: 0.5rem 0 1rem;
     text-align: justify;
     color: #000000;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 .about {
@@ -364,9 +364,9 @@ header.scrolled .navbar li a:hover {
     margin: 0.5rem 0 1rem;
     text-align: justify;
     color: #000000;
-    font-size: 1.4rem;
-    font-weight: 600;
-    line-height: 1.6;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
 }
 
 .about, .innovator {
@@ -457,14 +457,14 @@ header.scrolled .navbar li a:hover {
 
 .image-description {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: #000000;
-    line-height: 1.6;
+    line-height: 1.5;
     background: white;
     flex-grow: 1;
     display: flex;
     align-items: center;
-    font-weight: 700;
+    font-weight: normal;
 }
 
 .about-img, .innovator-img, .image-container {
@@ -951,15 +951,23 @@ header.scrolled .navbar li a:hover {
 
     .about-text p,
     .innovator-text p {
-        font-size: 1.2rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 
     .home-text p {
-        font-size: 1.3rem;
+        font-size: 0.95rem;
+        font-weight: normal;
     }
 
     .home-text h1 {
-        font-size: 2.4rem;
+        font-size: 1.3rem;
+        font-weight: normal;
+    }
+
+    .home-text h2 {
+        font-size: 1.2rem;
+        font-weight: normal;
     }
 }
 
@@ -997,11 +1005,11 @@ header.scrolled .navbar li a:hover {
     }
 
     .home-text h1 {
-        font-size: 3rem;
+        font-size: 1.3rem;
     }
 
     .home-text h2 {
-        font-size: 1.5rem;
+        font-size: 0.95rem;
     }
 }
 
@@ -1051,11 +1059,13 @@ header.scrolled .navbar li a:hover {
     }
 
     .home-text h1 {
-        font-size: 2.4rem;
+        font-size: 1.3rem;
+        font-weight: normal;
     }
 
     .home-text h2 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: normal;
     }
 }
 
@@ -1066,11 +1076,13 @@ header.scrolled .navbar li a:hover {
     }
 
     .home-text h1 {
-        font-size: 2.4rem;
+        font-size: 1.3rem;
+        font-weight: normal;
     }
 
     .home-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        font-weight: normal;
     }
 
     .shop-container .box {
@@ -1078,7 +1090,7 @@ header.scrolled .navbar li a:hover {
     }
 
     .heading h1 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .heading span {
@@ -1165,8 +1177,9 @@ header.scrolled .navbar li a:hover {
 /* Responsive adjustment for smaller screens */
 @media (max-width: 768px) {
     .image-description {
-        font-size: 1.2rem;
-        line-height: 1.5;
+        font-size: 0.7rem;
+        line-height: 1.2;
+        padding: 0.7rem;
     }
 }
 
