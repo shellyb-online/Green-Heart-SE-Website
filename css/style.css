@@ -1265,3 +1265,96 @@ header.scrolled .navbar li a:hover {
     }
 }
 
+/* Responsive styles for larger phones */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .contact-form {
+        max-width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* Specific styles for Galaxy S8+ (360x740) */
+@media (max-width: 360px) {
+    .contact-container {
+        padding: 0.5rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .contact-form .btn3 {
+        padding: 0.7rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Specific styles for iPhone SE (375x667) */
+@media (max-width: 375px) {
+    .contact-container {
+        padding: 0.5rem;
+    }
+
+    .contact-form {
+        gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.7rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Specific styles for Galaxy Z Fold 5 (inner: 904x1436, outer: 349x1812) */
+@media (max-width: 904px) and (min-width: 349px) {
+    .contact-container {
+        padding: 1rem;
+        max-width: 90%;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 349px) {
+    .contact-container {
+        padding: 0.4rem;
+    }
+
+    .contact-form {
+        gap: 0.8rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .contact-form .btn3 {
+        padding: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
