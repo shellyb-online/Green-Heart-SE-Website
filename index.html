@@ -118,8 +118,6 @@
             <span>GET IN TOUCH</span>
             <h1>CONTACT</h1>
         </div>
-        <!-- <p class="contact-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua.</p> -->
         <div class="contact-container">
             <div class="contact-info">
                 <div class="info-item">
@@ -137,8 +135,7 @@
                     </div>
                     <div class="info-content">
                         <h3>Number</h3>
-                        <a href="tel:+233559283267">+233559283267</a>
-                        <!-- <p>+233559283267</p> -->
+                        <a href="tel:+233559283267" class="contact-link">+233559283267</a>
                     </div>
                 </div>
                 <div class="info-item">
@@ -147,17 +144,19 @@
                     </div>
                     <div class="info-content">
                         <h3>email</h3>
-                        <a href="mailto:rolandkoomson123@gmail.com">rolandkoomson123@gmail.com</a>
+                        <a href="mailto:rolandkoomson123@gmail.com" class="contact-link">rolandkoomson123@gmail.com</a>
                         <!-- <p>rolandkoomson123@gmail.com</p> -->
                     </div>
                 </div>
             </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea placeholder="Your Message"></textarea>
-                <a href="#" class="btn3">SEND MESSAGE</a>
-            </form>
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn3">SEND MESSAGE</button>
+                </form>
+            </div>
         </div>
     </section>
     <footer class="footer">
