@@ -398,7 +398,8 @@ header.scrolled .navbar li a:hover {
 
 .innovator-text p {
     margin: 0.5rem 0 1rem;
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: left;
     color: #ffffff;
     font-size: 1rem;
     font-weight: normal;
@@ -449,7 +450,8 @@ header.scrolled .navbar li a:hover {
 
 .about-text p {
     margin: 1rem 0;
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: left;
     color: #ffffff;
     font-size: 1rem;
     font-weight: normal;
@@ -1688,7 +1690,8 @@ header.scrolled .navbar li a:hover {
     font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
-    text-align: justify;
+    /* text-align: justify; */
+    text-align: left;
 }
  .vm{
     display: flex;
