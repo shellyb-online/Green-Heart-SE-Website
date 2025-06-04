@@ -1696,8 +1696,17 @@ header.scrolled .navbar li a:hover {
  .vm{
     display: flex;
     gap: 50px;
+    /* flex-direction: column; */
+    
  }
-@media (max-width: 768px) {
+
+ @media (max-width: 425px)  {
+.vm {
+    flex-direction: column;}
+     }
+ 
+@media (max-width: 768px) 
+{
     .mission {
         flex-direction: column;
         gap: 2rem;
@@ -1846,20 +1855,20 @@ header.scrolled .navbar li a:hover {
     color: #ffffff;
 }
 
-.mission > div span {
+/* .mission > div span {
     display: block;
     font-size: 1.2rem;
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 1rem;
     text-transform: uppercase;
-}
+} */
 
-.mission > div p {
+/* .mission > div p {
     font-size: 1rem;
     line-height: 1.6;
     color: #ffffff;
     text-align: justify;
-}
+} */
 
 
