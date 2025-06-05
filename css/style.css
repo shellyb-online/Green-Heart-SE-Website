@@ -358,62 +358,51 @@ header.scrolled .navbar li a:hover {
     color: #000000;
 }
 
-.innovator {
+.Product {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    align-items: flex-start;
+    gap: 4rem;
     padding: 50px 10%;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.innovator-img {
-    flex: 1 1 400px;
-    max-height: 450px;
+.Product-img {
+    flex: 0 1 45%;
+    height: 400px;
+    border-radius: 10px;
     overflow: hidden;
-    border-radius: 8px;
+    box-shadow: 0 8px 30px var(--shadow-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.innovator-img img {
+.Product-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
     display: block;
+    transition: transform 0.3s ease;
 }
 
-.innovator-text {
-    flex: 1 1 500px;
+.Product-text {
+    flex: 0 1 45%;
+    height: 400px;
     padding: 2rem;
     background: rgba(0, 0, 0, 0.85);
     border-radius: 10px;
     box-shadow: 0 4px 15px var(--shadow-color);
-    max-height: none;
-    overflow-y: visible;
+    overflow-y: auto;
 }
 
-.innovator-text h2 {
-    font-size: 1.2rem;
-    color: #ffffff;
-    margin-bottom: 1rem;
-}
-
-.innovator-text p {
-    margin: 0.5rem 0 1rem;
-    /* text-align: justify; */
+.Product-text p {
+    margin: 1rem 0;
     text-align: left;
     color: #ffffff;
     font-size: 1rem;
     font-weight: normal;
-    line-height: 1.5;
-}
-
-.innovator-text .links a {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.innovator-text .links a:hover {
-    color: #ebdbc8;
+    line-height: 1.6;
 }
 
 .about {
@@ -423,22 +412,6 @@ header.scrolled .navbar li a:hover {
     padding: 50px 10%;
     align-items: center;
     justify-content: space-between;
-}
-
-.about-img {
-    flex: 0 1 35%;
-    max-height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 8px 30px var(--shadow-color);
-}
-
-.about-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
 }
 
 .about-text {
@@ -473,35 +446,35 @@ header.scrolled .navbar li a:hover {
     color: #ebdbc8;
 }
 
-.about, .innovator {
+.about, .Product {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 50px 10%;
 }
 
-.innovator {
+.Product {
     position: relative;
 }
 
-.innovator .heading {
+.Product .heading {
     width: 100%;
     margin-bottom: 2rem;
 }
 
-.about-img, .innovator-img {
+.about-img, .Product-img {
     flex: 1 1 500px;
     max-height: 600px;
 }
 
-.about-img img, .innovator-img img {
+.about-img img, .Product-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
 
-.about-text, .innovator-text {
+.about-text, .Product-text {
     flex: 1 1 500px;
     max-height: 600px;
     overflow-y: auto;
@@ -571,13 +544,13 @@ header.scrolled .navbar li a:hover {
     font-weight: normal;
 }
 
-.about-img, .innovator-img, .image-container {
+.about-img, .Product-img, .image-container {
     overflow: hidden;
     box-shadow: 0 8px 30px var(--shadow-color);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.about-img:hover, .innovator-img:hover {
+.about-img:hover, .Product-img:hover {
     transform: translateY(-5px);
     box-shadow: 0 12px 40px var(--shadow-color);
 }
@@ -1062,13 +1035,21 @@ header.scrolled .navbar li a:hover {
         padding: 1rem;
     }
 
-    .innovator {
-        gap: 1.5rem;
+    .Product {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 30px 5%;
     }
-    
-    .innovator-img {
+
+    .Product-img,
+    .Product-text {
         flex: 1 1 100%;
-        max-height: 350px;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .Product-text {
+        padding: 1.5rem;
     }
 }
 
@@ -1285,13 +1266,13 @@ header.scrolled .navbar li a:hover {
 }
 
 @media (max-width: 768px) {
-    .about, .innovator {
+    .about, .Product {
         flex-direction: column;
         padding: 50px 7%;
     }
 
-    .about-img, .innovator-img,
-    .about-text, .innovator-text {
+    .about-img, .Product-img,
+    .about-text, .Product-text {
         flex: 1 1 100%;
         max-height: none;
         overflow-y: visible;
