@@ -29,7 +29,7 @@ html {
 }
 
 section:not(.home) {
-    background: var(--muted-brown);
+    /* background: var(--muted-brown); */
     padding: 50px 10%;
     position: relative;
     overflow: hidden;

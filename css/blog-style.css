@@ -23,12 +23,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 90px; /* Add padding for navbar */
+    /* padding-top: 90px; Add padding for navbar */
 }
 
 .hero-container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0 20px;
     position: relative;
     top: 45px; /* Push content down from navbar */
@@ -88,14 +88,16 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px var(--shadow-color);
-    width: 45%;
+    width: 35%;
+    max-width: 400px;
 }
 
 .blog-image {
-    width: 58%;
+    width: 100%;
     height: auto;
     display: block;
     transition: transform 0.3s ease;
+    object-fit: cover;
 }
 
 .blog-img-container:hover .blog-image {
@@ -153,6 +155,11 @@
     .blog-post p {
         font-size: 1rem;
     }
+
+    .blog-img-container {
+        width: 60%;
+        max-width: 300px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -174,5 +181,10 @@
 
     .blog-signoff {
         font-size: 1rem;
+    }
+
+    .blog-img-container {
+        width: 80%;
+        max-width: 250px;
     }
 }
