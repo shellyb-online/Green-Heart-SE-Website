@@ -30,7 +30,7 @@
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: var(--white);
+    background-color: black;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
@@ -122,7 +122,8 @@
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-green);
+    /* color: var(--primary-green); */
+    color: white;
 }
 
 .nav-link::after {
@@ -133,6 +134,7 @@
     width: 0;
     height: 2px;
     background-color: var(--primary-green);
+    /* background-color: white; */
     transition: width 0.3s ease;
 }
 
@@ -147,6 +149,7 @@
     left: 0;
     background-color: var(--white);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    /* box-shadow: white; */
     border-radius: 5px;
     padding: 1rem 0;
     min-width: 200px;
@@ -821,7 +824,7 @@
 }
 
 .product-showcase {
-    width: 100%;
+    width: 97%;
     height: auto;
     display: block;
     transition: transform 0.5s ease;
