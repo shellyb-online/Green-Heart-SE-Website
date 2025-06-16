@@ -653,7 +653,7 @@
     background: linear-gradient(135deg, var(--primary-green), var(--dark-green));
     color: var(--white);
     padding: 0.8rem 1.8rem;
-    border-radius: 4px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -664,7 +664,7 @@
     background: transparent;
     color: var(--primary-green);
     padding: 0.8rem 1.8rem;
-    border-radius: 4px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -791,7 +791,8 @@
     background: transparent;
     color: var(--primary-green);
     padding: 0.8rem 1.8rem;
-    border-radius: 4px;
+    /* border-radius: 4px; */
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
@@ -1657,7 +1658,8 @@ address {
     color: var(--white);
     border: none;
     padding: 1rem 2rem;
-    border-radius: 4px;
+    /* border-radius: 30px; */
+    border-radius: 30px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
