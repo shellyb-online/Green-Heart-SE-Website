@@ -11,87 +11,309 @@
 
 <body>
   <header class="header">
-    <a href="index.html" class="logo"><img src="./assets/images/GH SE LOGO 2.png" alt="GreenHeart Logo" /></a>
-    <div class="bx bx-menu" id="menu-icon"></div>
-    <ul class="navbar">
-      <li><a href="index.html#home">Home</a></li>
-      <li><a href="index.html#about">Product</a></li>
-      <li><a href="index.html#shop">Shop</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-    </ul>
-  </header>
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/GH SE LOGO 2.png" alt="GreenHeart SE Logo" class="logo-img" loading="eager">
+        </a>
+        
+        <nav class="navigation">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+            
+            <ul class="navbar" id="navbar">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#product" class="nav-link">Products <i class='bx bx-chevron-down'></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#product-biochar" class="dropdown-link">BioCHARGE</a></li>
+                        <li><a href="index.html#product-fertilizers" class="dropdown-link">Organic Fertilizers</a></li>
+                        <li><a href="index.html#product-solutions" class="dropdown-link">Soil Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index.html#shop" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="index.html#shop" class="cart-icon" aria-label="Shopping cart">
+                    <i class='bx bx-cart'></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="index.html#contact" class="cta-button">Get Started</a>
+            </div>
+        </nav>
+    </div>
+</header>
 
   <section class="blog-hero">
+    <div class="hero-overlay"></div>
     <div class="hero-container">
-      <h1>GreenHeart SE Blog</h1>
-      <p>Stories, insights, and updates from Ghana's circular bioeconomy powerhouse</p>
+        <div class="hero-content">
+            <div class="breadcrumbs">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="blog.html">Blog</a>
+            </div>
+            <h1 class="hero-title">GreenHeart SE Blog</h1>
+            <p class="hero-subtitle">Stories, insights, and updates from Ghana's circular bioeconomy powerhouse</p>
+            <div class="hero-search">
+                <form class="search-form">
+                    <input type="text" placeholder="Search articles..." aria-label="Search blog articles">
+                    <button type="submit" aria-label="Search">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="blog-post">
-    <div class="post-container">
-      <div class="post-header">
-      <h2>Turning Waste Into Wealth: GreenHeart SE's  for a Greener Ghana</h2>
-      <p class="post-date">Posted on June 5, 2025</p>
-      </div>
-     
+ <section class="blog-article">
+    <div class="article-container">
+        <article class="post-content">
+            <header class="post-header">
+                <div class="post-meta">
+                    <span class="category-tag">Sustainability</span>
+                    <span class="reading-time">5 min read</span>
+                </div>
+                <h1 class="post-title">Turning Waste Into Wealth: GreenHeart SE's Vision for a Greener Ghana</h1>
+                <div class="post-author">
+                    <img src="./assets/images/team-member.jpg" alt="GreenHeart SE Team" class="author-avatar">
+                    <div class="author-info">
+                        <span class="author-name">GreenHeart SE Editorial Team</span>
+                        <span class="post-date">June 5, 2025</span>
+                    </div>
+                </div>
+            </header>
 
-      <div class="blog-img-container">
-      <img src="./assets/images/small-green-plant-growing-ABSA SE.jpg" alt="GreenHeart Biochar" class="blog-image" />
-      </div>
-      
-      <div class="blog-text">
-        <p>At GreenHeart SE, we believe the future of Ghana—and Africa—depends on how we treat our land, our waste, and our communities today. That's why we've made it our  to turn agricultural and forestry waste into climate-positive products that regenerate soil, remove carbon from the atmosphere, and create sustainable livelihoods.</p>
+            <div class="featured-image">
+                <img src="./assets/images/small-green-plant-growing-ABSA-SE.jpg" 
+                     alt="Green plant growing with GreenHeart SE biochar solutions" 
+                     class="article-image"
+                     loading="lazy">
+                <div class="image-caption">Regenerative agriculture in action using GreenHeart SE products</div>
+            </div>
 
-      <p>From transforming over 1 million tons of organic waste into biochar and clean energy, to restoring 2 million hectares of degraded land across Ghana and West Africa, GreenHeart SE is championing a circular bioeconomy built for resilience.</p>
+            <div class="article-body">
+                <p class="lead-paragraph">At GreenHeart SE, we believe the future of Ghana—and Africa—depends on how we treat our land, our waste, and our communities today. That's why we've made it our mission to turn agricultural and forestry waste into climate-positive products that regenerate soil, remove carbon from the atmosphere, and create sustainable livelihoods.</p>
 
-      <p>Our vision by 2035 is bold: to become Ghana's circular bioeconomy powerhouse. That means regenerating ecosystems, empowering 2 million farmers and agribusinesses with regenerative tools, and capturing 2.5 million tons of CO₂-equivalent es each year.</p>
+                <p>From transforming over <strong>1 million tons of organic waste</strong> into biochar and clean energy, to restoring <strong>2 million hectares of degraded land</strong> across Ghana and West Africa, GreenHeart SE is championing a circular bioeconomy built for resilience.</p>
 
-      <p>And we're not doing this alone. Through partnerships with farmers, cooperatives, governments, and investors, we're scaling impact-driven solutions that are rooted in science and powered by innovation. Whether it's biochar-based fertilizers, bio-stimulants, or digital monitoring systems, our technologies are designed to be accessible, affordable, and transformative.</p>
+                <div class="callout-box">
+                    <p>"Our vision by 2035 is bold: to become Ghana's circular bioeconomy powerhouse. That means regenerating ecosystems, empowering 2 million farmers, and capturing 2.5 million tons of CO₂ annually."</p>
+                </div>
 
-      <p>Stay tuned as we share stories of change, profiles of farmers leading the green transition, and updates on how GreenHeart SE is shaping policy, research, and market leadership across Africa's climate-smart agriculture space.</p>
+                <p>We're not doing this alone. Through strategic partnerships with farmers, cooperatives, governments, and investors, we're scaling impact-driven solutions that are:</p>
+                
+                <ul class="feature-list">
+                    <li><i class='bx bx-check-circle'></i> Rooted in environmental science</li>
+                    <li><i class='bx bx-check-circle'></i> Powered by green innovation</li>
+                    <li><i class='bx bx-check-circle'></i> Designed for accessibility</li>
+                    <li><i class='bx bx-check-circle'></i> Committed to affordability</li>
+                </ul>
 
-      <p class="blog-signoff">— Team GreenHeart SE</p>
-      </div>
+                <h2>Our Technologies Making an Impact</h2>
+                
+                <div class="technology-grid">
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class='bx bx-leaf'></i>
+                        </div>
+                        <h3>Biochar-Based Fertilizers</h3>
+                        <p>Enhancing soil fertility while sequestering carbon for decades</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class='bx bx-droplet'></i>
+                        </div>
+                        <h3>Bio-Stimulants</h3>
+                        <p>Natural plant growth enhancers for improved yield and quality</p>
+                    </div>
+                    <div class="tech-card">
+                        <div class="tech-icon">
+                            <i class='bx bx-chip'></i>
+                        </div>
+                        <h3>Digital Monitoring</h3>
+                        <p>Real-time tracking of soil health and carbon impact</p>
+                    </div>
+                </div>
 
-     
+                <p>Stay tuned to our blog as we share:</p>
+                <ul>
+                    <li>Success stories from farmers leading the green transition</li>
+                    <li>Updates on our policy advocacy work</li>
+                    <li>Breakthroughs in climate-smart agriculture research</li>
+                    <li>Spotlights on our growing network of sustainability champions</li>
+                </ul>
+
+                <div class="article-footer">
+                    <div class="tags">
+                        <span class="tag-label">Tags:</span>
+                        <a href="#" class="tag">Biochar</a>
+                        <a href="#" class="tag">Circular Economy</a>
+                        <a href="#" class="tag">Climate Action</a>
+                        <a href="#" class="tag">Agriculture</a>
+                    </div>
+                    <div class="signature">
+                        <p>— The GreenHeart SE Team</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <aside class="article-sidebar">
+            <div class="sidebar-widget">
+                <h3>About the Author</h3>
+                <div class="author-bio">
+                    <img src="./assets/images/team-member.jpg" alt="GreenHeart SE Team" class="bio-avatar">
+                    <p>The GreenHeart SE editorial team consists of sustainability experts, agricultural scientists, and climate activists committed to sharing knowledge about regenerative practices in Africa.</p>
+                </div>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3>Related Posts</h3>
+                <div class="related-post">
+                    <a href="#">
+                        <h4>The Science Behind Biochar Carbon Sequestration</h4>
+                        <span class="related-date">May 22, 2025</span>
+                    </a>
+                </div>
+                <div class="related-post">
+                    <a href="#">
+                        <h4>Farmer Spotlight: Kwame's Regenerative Journey</h4>
+                        <span class="related-date">April 15, 2025</span>
+                    </a>
+                </div>
+                <div class="related-post">
+                    <a href="#">
+                        <h4>How Circular Economy is Transforming African Agriculture</h4>
+                        <span class="related-date">March 8, 2025</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="sidebar-widget newsletter-widget">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to our newsletter for the latest in sustainable agriculture</p>
+                <form class="sidebar-newsletter">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </aside>
     </div>
-  </section>
+</section>
 
   <footer class="footer">
+    <!-- Wave divider at top -->
+    <div class="footer-wave">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="currentColor"></path>
+            <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="currentColor"></path>
+            <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>
+        </svg>
+    </div>
+    
     <div class="footer-container">
-      <div class="footer-section">
-        <img src="./assets/images/GH SE LOGO 2.png" alt="Logo" class="footer-logo" />
-        <p class="footer-description">Decarbonizing Africa's<br />Agriculture Supply Chains</p>
-      </div>
-      <div class="footer-section">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="index.html#home">Home</a></li>
-          <li><a href="index.html#about">Our Company</a></li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Connect With Us</h3>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/company/greeheartse" target="_blank" rel="noopener noreferrer" ><i class='bx bxl-linkedin'></i></a>
-                   
-                    <a href="https://www.facebook.com/greenheartse" target="_blank" rel="noopener noreferrer" class="facebook-icon"><i class="bx bxl-facebook"></i></a>
-                    <!-- <a href="#" class="youtube-icon"><i class='bx bxl-youtube'></i></a> -->
-                    <a href="https://www.instagram.com/greenheartse" target="_blank" rel="noopener noreferrer" class="instagram-icon"><i class="bx bxl-instagram"></i></a>
-
-                    <a href="https://www.x.com/greenheartse" target="_blank" rel="noopener noreferrer" class="twitter-icon"><i class='bx bxl-twitter'></i></a>
+        <!-- Brand/Logo Section -->
+        <div class="footer-section">
+            <div class="footer-brand">
+                <img src="./assets/images/GH-SE-LOGO-2.png" alt="GreenHeart SE Logo" class="footer-logo" loading="lazy">
+                <p class="footer-description">Decarbonizing Africa's Agriculture Supply Chains</p>
+                <div class="newsletter">
+                    <h4>Get Updates</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit"><i class='bx bx-envelope'></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="additional-links">
-          <a href="#">Privacy Policy</a>
+        
+        <!-- Navigation Links -->
+        <div class="footer-section">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">Our Company</a></li>
+                <li><a href="index.html#product">Products</a></li>
+                <li><a href="index.html#shop">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
+        
+        <!-- Company Info -->
+        <div class="footer-section">
+            <h3 class="footer-heading">Company</h3>
+            <ul class="footer-links">
+                <li><a href="#mission">Our Mission</a></li>
+                <li><a href="#team">Our Team</a></li>
+                <li><a href="#impact">Our Impact</a></li>
+                <li><a href="#careers">Careers</a></li>
+                <li><a href="#partners">Partners</a></li>
+            </ul>
+        </div>
+        
+        <!-- Contact/Social Section -->
+        <div class="footer-section">
+            <h3 class="footer-heading">Connect With Us</h3>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/company/greeheartse" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="https://www.facebook.com/greenheartse" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="bx bxl-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com/greenheartse" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bx bxl-instagram"></i>
+                </a>
+                <a href="https://www.x.com/greenheartse" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+            </div>
+            
+            <div class="contact-info">
+                <p><i class='bx bx-envelope'></i> contact@greenheartse.com</p>
+                <p><i class='bx bx-phone'></i> +233 123 456 789</p>
+            </div>
+            
+            <div class="additional-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
     </div>
+    
+    <!-- Copyright Section -->
     <div class="footer-bottom">
-      <p>All Rights Reserved.</p>
+        <div class="footer-bottom-container">
+            <p>&copy; <span id="current-year"></span> GreenHeart SE. All Rights Reserved.</p>
+            <div class="back-to-top">
+                <a href="#home" aria-label="Back to top"><i class='bx bx-chevron-up'></i></a>
+            </div>
+        </div>
     </div>
-  </footer>
+</footer>
+
+<script>
+    // Auto-update copyright year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+    
+    // Newsletter form submission
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input').value;
+        // In a real implementation, you would send this to your server
+        alert('Thank you for subscribing!');
+        this.reset();
+    });
+</script>
 </body>
 </html>
