@@ -4,17 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About GreenHeart SE</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/about-style.css">
 </head>
 <body>
+  <header class="header">
+    <div class="header-container">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/GH SE LOGO 2.png" alt="GreenHeart SE Logo" class="logo-img" loading="eager">
+        </a>
+        
+        <nav class="navigation">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle navigation">
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+                <span class="menu-icon-bar"></span>
+            </button>
+            
+            <ul class="navbar" id="navbar">
+                <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#product" class="nav-link">Products <i class='bx bx-chevron-down'></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#product-biochar" class="dropdown-link">BioCHARGE</a></li>
+                        <li><a href="index.html#product-fertilizers" class="dropdown-link">Organic Fertilizers</a></li>
+                        <li><a href="index.html#product-solutions" class="dropdown-link">Soil Solutions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="index.html#shop" class="nav-link">Shop</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">About</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+            </ul>
+            
+            <div class="header-actions">
+                <a href="index.html#shop" class="cart-icon" aria-label="Shopping cart">
+                    <i class='bx bx-cart'></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="index.html#contact" class="cta-button">Get Started</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
   <!-- Hero Header -->
-  <header class="hero-header">
+  <section class="hero-header">
     <div class="container">
       <h1>About GreenHeart SE</h1>
       <p class="subtitle">Transforming agricultural waste into climate-positive solutions for a sustainable future</p>
     </div>
-  </header>
+  </section>
 
   <!-- Intro Section -->
   <section class="section section-white">
