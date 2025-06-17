@@ -1,42 +1,77 @@
-// Mobile Menu Variables
-let menu = document.querySelector('#menu-icon');
-let navbar = document.querySelector('.navbar');
-
-// Mobile Menu Toggle Function
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-}
-
-// Close Mobile Menu on Scroll
-window.onscroll = () => {
-    menu.classList.remove('bx-x');
-    navbar.classList.remove('active');
-}
-
-// Header Scroll Effect
-// window.addEventListener("scroll", function () {
-//     let navbar = document.querySelector("header");
-//     // Add/remove classes based on scroll position
-//     if (window.scrollY > 50) {
-//         navbar.classList.add("scrolled");
-//         navbar.classList.remove("transparent");
-//     } else {
-//         navbar.classList.add("transparent");
-//         navbar.classList.remove("scrolled");
-//     }
-// });
-// Header Functionality
+// Mobile Menu and Navigation Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const navbar = document.getElementById('navbar');
     const navLinks = document.querySelectorAll('.nav-link');
-    const dropdowns = document.querySelectorAll('.dropdown');})
-
-// Mobile Menu Icon Click Handler
-menuIcon.onclick = () => {
-    navbar.classList.toggle("active");
-};
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    // Mobile menu toggle
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navbar.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+    }
+    
+    // Close mobile menu when clicking a link
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navbar && navbar.classList.contains('active')) {
+                mobileMenuToggle.classList.remove('active');
+                navbar.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            }
+        });
+    });
+    
+    // Dropdown functionality for mobile
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.nav-link');
+        
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 992) {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+    
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        if (header && window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else if (header) {
+            header.classList.remove('scrolled');
+        }
+    });
+    
+    // Active link highlighting
+    const sections = document.querySelectorAll('section');
+    
+    window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= (sectionTop - 100)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+});
 
 // Video Lightbox Functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -84,77 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
       
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const navbar = document.getElementById('navbar');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const dropdowns = document.querySelectorAll('.dropdown');
-    
-    // Mobile menu toggle
-    mobileMenuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navbar.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-    });
-    
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            if (navbar.classList.contains('active')) {
-                mobileMenuToggle.classList.remove('active');
-                navbar.classList.remove('active');
-                document.body.classList.remove('no-scroll');
-            }
-        });
-    });
-    
-    // Dropdown functionality for mobile
-    dropdowns.forEach(dropdown => {
-        const link = dropdown.querySelector('.nav-link');
-        
-        link.addEventListener('click', function(e) {
-            if (window.innerWidth <= 992) {
-                e.preventDefault();
-                dropdown.classList.toggle('active');
-            }
-        });
-    });
-    
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-    });
-    
-    // Active link highlighting
-    const sections = document.querySelectorAll('section');
-    
-    window.addEventListener('scroll', function() {
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (pageYOffset >= (sectionTop - 100)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').includes(current)) {
-                link.classList.add('active');
-            }
-        });
-    });
 });
 
 // Footer functionality
