@@ -118,7 +118,6 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxVideo.currentTime = 0;
         }
     });
-      
 });
 
 // Footer functionality

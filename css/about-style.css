@@ -124,6 +124,12 @@ body {
   font-size: 1.1rem;
 }
 
+.intro-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
 /* Products Section */
 .products-grid {
   display: grid;
