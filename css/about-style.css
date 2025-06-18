@@ -43,7 +43,10 @@ body {
 .hero-header {
   background: linear-gradient(135deg, var(--primary) 0%, #004d29 100%);
   color: white;
-  padding: 5rem 0;
+  /* width: 100%; */
+  height: 65%;
+  /* padding: 1.5rem; */
+  padding: 8rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -86,6 +89,7 @@ body {
 
 .section-white {
   background-color: white;
+  /* padding: 1.5rem; */
 }
 
 .section-light {
@@ -121,6 +125,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  /* text-align: right; */
   font-size: 1.1rem;
 }
 
