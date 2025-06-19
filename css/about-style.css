@@ -39,12 +39,19 @@ body {
   padding: 0 20px;
 }
 
+
 /* Header */
+.hero {
+  height: auto;
+  min-height: auto;
+  overflow: visible;
+}
+
 .hero-header {
   background: linear-gradient(135deg, var(--primary) 0%, #004d29 100%);
   color: white;
   /* width: 100%; */
-  height: 65%;
+  height: 60%;
   /* padding: 1.5rem; */
   padding: 8rem 0;
   text-align: center;
@@ -270,6 +277,7 @@ body {
 }
 
 /* Responsive */
+
 @media (max-width: 768px) {
   .hero-header h1 {
     font-size: 2.2rem;
