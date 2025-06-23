@@ -1965,7 +1965,8 @@ address {
         width: 80%;
         max-width: 350px;
         height: 100vh;
-        background-color: var(--white);
+        /* background-color: var(--white); */
+        background-color: black;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         flex-direction: column;
         justify-content: flex-start;
