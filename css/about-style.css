@@ -39,25 +39,6 @@ body {
   padding: 0 20px;
 }
 
-.navbar {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        max-width: 350px;
-        height: 39vh;
-        background-color: var(--white);
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 2rem;
-        transition: right 0.3s ease;
-        z-index: 1000;
-    }
-
-    
-
 /* Header */
 .hero {
   height: auto;
