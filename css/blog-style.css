@@ -9,6 +9,8 @@
   --light-text: #777;
   --card-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   --transition: all 0.3s ease;
+  --primary-green: #006400;
+  --black: #222222;
 }
 
 /* Base Styles */
@@ -453,7 +455,7 @@ a:hover {
 
 /* Footer Styles */
 .blog-footer {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, var(--primary-green) 0%, var(--black) 100%);
   color: white;
   padding: 60px 0 0;
 }
