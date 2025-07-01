@@ -15,7 +15,8 @@
 
 /* Base Styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: var(--light-color);
@@ -223,7 +224,7 @@ a:hover {
 
 .featured-article .article-content h2 {
   color: #111;
-  margin-top: 2rem;
+  margin-top: 3.5rem;
 }
 
 .featured-article .article-content p {
