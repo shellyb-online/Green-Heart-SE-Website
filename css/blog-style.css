@@ -281,9 +281,15 @@ a:hover {
 
 .articles-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr) !important;
   gap: 30px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .articles-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 .article-card {
@@ -373,6 +379,14 @@ a:hover {
   margin: 0 0 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #f0f0f0;
+}
+
+.sidebar h3:first-of-type {
+  margin-top: 0;
+}
+
+.sidebar-widget.categories {
+  margin-top: 6rem;
 }
 
 /* Categories Widget */
