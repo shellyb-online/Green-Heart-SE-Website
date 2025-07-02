@@ -49,7 +49,7 @@ a:hover {
 .blog-header {
   background-color: var(--primary-color);
   color: white;
-  padding: 80px 0 120px;
+  padding: 40px 0 150px;
   text-align: center;
   position: relative;
 }
@@ -67,14 +67,16 @@ a:hover {
 
 .subtitle {
   font-size: 1.2rem;
-  margin: 15px auto 30px;
+  margin: 0 auto 20px;
   max-width: 600px;
+  position: relative;
+  z-index: 2;
 }
 
 .search-bar {
   display: flex;
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
 }
 
 .search-bar input {
@@ -102,18 +104,19 @@ a:hover {
 
 .header-wave {
   position: absolute;
-  bottom: 0;
+  bottom: -80px;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
+  height: 220px;
 }
 
 .header-wave svg {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 120px;
+  height: 220px;
 }
 
 /* Main Content Layout */
@@ -279,16 +282,16 @@ a:hover {
   z-index: 0;
 }
 
-.articles-grid {
+.main-content .articles-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-bottom: 40px;
 }
 
 @media (max-width: 767px) {
-  .articles-grid {
-    grid-template-columns: 1fr !important;
+  .main-content .articles-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -298,6 +301,7 @@ a:hover {
   overflow: hidden;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  width: auto;
 }
 
 .article-card:hover {
@@ -604,6 +608,10 @@ a:hover {
   .section-title {
     font-size: 1.5rem;
   }
+  
+  .blog-header {
+    padding: 30px 0 110px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -632,5 +640,11 @@ a:hover {
   
   .legal-links {
     justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .blog-header {
+    padding: 80px 0 110px;
   }
 }
