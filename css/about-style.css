@@ -37,21 +37,38 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+
+/* Ensure header stays on top of hero section */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background-color: rgba(0, 100, 0, 0.514);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero {
+  position: relative;
+  z-index: 1;
+  margin-top: 80px; /* Add top margin to account for fixed header */
 }
 
 /* Header */
-.hero {
-  height: auto;
-  min-height: auto;
-  overflow: visible;
-}
-
-.hero-header {
+.about-hero-header {
   background: linear-gradient(135deg, var(--primary) 0%, #004d29 100%);
   color: white;
   /* width: 100%; */
-  height: 60%;
+  height: 70%;
   /* padding: 1.5rem; */
   padding: 8rem 0;
   text-align: center;
@@ -64,7 +81,7 @@ body {
   flex-direction: column;
 }
 
-.hero-header::before {
+.about-hero-header::before {
   content: '';
   position: absolute;
   top: 0;
@@ -76,7 +93,7 @@ body {
   z-index: 0;
 }
 
-.hero-header .container {
+.containers {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -89,20 +106,20 @@ body {
   z-index: 1;
 }
 
-.hero-header h1 {
+.about-hero-header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
 }
 
-.hero-header p.subtitle {
+.about-hero-header p.subtitle {
   font-size: 1.2rem;
   max-width: 800px;
   margin: 0 auto;
   opacity: 0.9;
 }
 
-.hero-image img {
+.about-hero-image img {
   width: 100%;
   height: auto;
   display: block;
