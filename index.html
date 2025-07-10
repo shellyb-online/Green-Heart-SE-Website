@@ -291,12 +291,12 @@
                 <h3 class="product-name">BioCHARGE</h3>
                 <p class="product-description">500ml Organic fertilizer</p>
                 <div class="product-meta">
-                    <span class="price">₵25.00</span>
+                    <span class="price">₵100.00</span>
                     <span class="rating">★★★★☆ (24)</span>
                     <!-- <span class="size-pill">5L</span> -->
                 </div>
                 <!-- <a href="#" class="product-cta">View Details</a> -->
-                 <button class="add-to-cart">Add-to-cart</button>
+                 <button onclick="openPurchaseModal(0)" class="cta-button">Add to Cart</button>
             </div>
         </div>
 
@@ -311,10 +311,10 @@
                 <h3 class="product-name">BioCHARGE</h3>
                 <p class="product-description">500ml concentrated formula</p>
                 <div class="product-meta">
-                    <span class="price">₵25.00</span>
+                    <span class="price">₵100.00</span>
                     <span class="rating">★★★★☆ (24)</span>
                 </div>
-                <button class="add-to-cart">Add to Cart</button>
+                <button onclick="openPurchaseModal(1)" class="cta-button">Add to Cart</button>
             </div>
         </div>
 
@@ -329,10 +329,10 @@
                 <h3 class="product-name">BioCHARGE</h3>
                 <p class="product-description">1 Liter professional size</p>
                 <div class="product-meta">
-                    <span class="price">₵45.00</span>
+                    <span class="price">₵1,200.00</span>
                     <span class="rating">★★★★★ (18)</span>
                 </div>
-                <button class="add-to-cart">Add to Cart</button>
+                <button onclick="openPurchaseModal(2)" class="cta-button">Add to Cart</button>
             </div>
         </div>
 
@@ -347,10 +347,10 @@
                 <h3 class="product-name">BioCHARGE</h3>
                 <p class="product-description">5 Gallon commercial size</p>
                 <div class="product-meta">
-                    <span class="price">₵200.00</span>
+                    <span class="price">₵1,300.00</span>
                     <span class="saving">Save 15%</span>
                 </div>
-                <button class="add-to-cart">Add to Cart</button>
+                <button onclick="openPurchaseModal(3)" class="cta-button">Add to Cart</button>
             </div>
         </div>
     </div>
@@ -631,6 +631,106 @@
     </div>
 </footer>
     <script src="script.js"></script> 
+
+<!-- Customer Info Modal (hidden by default) -->
+<div id="purchaseModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; width:90%; position:relative;">
+    <button onclick="closeModal()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+    <h3 id="modalProductTitle">Purchase Product</h3>
+    <form id="purchaseForm">
+      <input type="hidden" id="modalProductName">
+      <input type="hidden" id="modalProductDesc">
+      <input type="hidden" id="modalProductPrice">
+      <div style="margin-bottom:1rem;">
+        <label>Name</label>
+        <input type="text" id="customerName" required style="width:100%; padding:0.5rem;">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label>Email</label>
+        <input type="email" id="customerEmail" required style="width:100%; padding:0.5rem;">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label>Phone Number</label>
+        <input type="tel" id="customerPhone" required style="width:100%; padding:0.5rem;">
+      </div>
+      <div style="margin-bottom:1rem;">
+        <label>Delivery Address</label>
+        <textarea id="customerAddress" required style="width:100%; padding:0.5rem;"></textarea>
+      </div>
+      <button type="submit" class="cta-button" style="width:100%;">Pay Now</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script>
+// Product data
+const products = [
+  { name: 'Biocharge', desc: '500ml Organic fertilizer', price: 10000 }, // 100.00 GHS in pesewas
+  { name: 'Biocharge', desc: '500ml concentrated formula', price: 10000 },
+  { name: 'Biocharge', desc: '1 Liter professional size', price: 120000 },
+  { name: 'Biocharge', desc: '5 Gallon commercial size', price: 130000 }
+];
+
+// Open modal with product info
+function openPurchaseModal(idx) {
+  document.getElementById('modalProductTitle').textContent = products[idx].name + ' - ' + products[idx].desc;
+  document.getElementById('modalProductName').value = products[idx].name;
+  document.getElementById('modalProductDesc').value = products[idx].desc;
+  document.getElementById('modalProductPrice').value = products[idx].price;
+  document.getElementById('purchaseModal').style.display = 'flex';
+}
+function closeModal() {
+  document.getElementById('purchaseModal').style.display = 'none';
+}
+// Handle form submit
+const purchaseForm = document.getElementById('purchaseForm');
+purchaseForm.onsubmit = function(e) {
+  e.preventDefault();
+  const name = document.getElementById('customerName').value;
+  const email = document.getElementById('customerEmail').value;
+  const phone = document.getElementById('customerPhone').value;
+  const address = document.getElementById('customerAddress').value;
+  const product = document.getElementById('modalProductName').value;
+  const desc = document.getElementById('modalProductDesc').value;
+  const price = parseInt(document.getElementById('modalProductPrice').value, 10);
+  payWithPaystack({ name, email, phone, address, product, desc, price });
+};
+function payWithPaystack(data) {
+  var handler = PaystackPop.setup({
+    key: 'pk_test_716c45f28bc1f53ea1d16649d4e0a8fe1b46204a',
+    email: data.email,
+    amount: data.price, // already in pesewas
+    currency: 'GHS',
+    ref: ''+Math.floor((Math.random() * 1000000000) + 1),
+    metadata: {
+      custom_fields: [
+        { display_name: 'Name', variable_name: 'name', value: data.name },
+        { display_name: 'Phone', variable_name: 'phone', value: data.phone },
+        { display_name: 'Delivery Address', variable_name: 'address', value: data.address },
+        { display_name: 'Product', variable_name: 'product', value: data.product },
+        { display_name: 'Description', variable_name: 'desc', value: data.desc }
+      ]
+    },
+    callback: function(response){
+      alert('Payment complete! Reference: ' + response.reference);
+      closeModal();
+    },
+    onClose: function(){
+      alert('Transaction was not completed, window closed.');
+    }
+  });
+  handler.openIframe();
+}
+</script>
+
+<!-- Example Add to Cart buttons for each product (put these in your product cards) -->
+<!--
+<button onclick="openPurchaseModal(0)" class="cta-button">Add to Cart</button>
+<button onclick="openPurchaseModal(1)" class="cta-button">Add to Cart</button>
+<button onclick="openPurchaseModal(2)" class="cta-button">Add to Cart</button>
+<button onclick="openPurchaseModal(3)" class="cta-button">Add to Cart</button>
+-->
 </body>
 
 </html>
