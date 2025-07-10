@@ -1442,6 +1442,7 @@
     box-shadow: 0 4px 15px rgba(0, 100, 0, 0.2);
 }
 
+
 .cta-button:hover {
     background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
     transform: translateY(-2px);
@@ -1915,7 +1916,7 @@ address {
 
 .cta-button:hover {
     background-color: var(--white);
-    color: var(--primary-green);
+    color: var(--white);
     transform: translateY(-2px);
 }
 
