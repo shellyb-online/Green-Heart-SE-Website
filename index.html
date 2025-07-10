@@ -738,6 +738,79 @@ function payWithPaystack(data) {
 <button onclick="openPurchaseModal(2)" class="cta-button">Add to Cart</button>
 <button onclick="openPurchaseModal(3)" class="cta-button">Add to Cart</button>
 -->
+
+<!-- Quick View Modal (hidden by default) -->
+<div id="quickViewModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center;">
+  <div style="background:#fff; padding:2rem; border-radius:10px; max-width:400px; width:90%; position:relative; text-align:center;">
+    <button onclick="closeQuickView()" style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+    <img id="quickViewImage" src="" alt="Product Image" style="width:100%; max-height:200px; object-fit:contain; margin-bottom:1rem;">
+    <h3 id="quickViewName"></h3>
+    <p id="quickViewDesc" style="color:#444; margin-bottom:1rem;"></p>
+    <div id="quickViewPrice" style="font-weight:700; color:#006400; font-size:1.2rem; margin-bottom:1.5rem;"></div>
+    <button id="quickViewBuyBtn" class="cta-button" style="width:100%;">Buy Now</button>
+  </div>
+</div>
+
+<script>
+// Product data for quick view (should match your product cards)
+const quickViewProducts = [
+  {
+    name: 'BioCHARGE',
+    desc: '500ml Organic fertilizer',
+    price: '₵100.00',
+    img: './assets/images/BioCHARGE (2).png',
+    buyIdx: 0
+  },
+  {
+    name: 'BioCHARGE',
+    desc: '500ml concentrated formula',
+    price: '₵100.00',
+    img: './assets/images/Biocharge one bottle.jpg',
+    buyIdx: 1
+  },
+  {
+    name: 'BioCHARGE',
+    desc: '1 Liter professional size',
+    price: '₵1,200.00',
+    img: './assets/images/Biochar bottle size.jpg',
+    buyIdx: 2
+  },
+  {
+    name: 'BioCHARGE',
+    desc: '5 Gallon commercial size',
+    price: '₵1,300.00',
+    img: './assets/images/Biochar gallon 1.jpg',
+    buyIdx: 3
+  }
+];
+
+// Open Quick View modal
+function openQuickView(idx) {
+  const p = quickViewProducts[idx];
+  document.getElementById('quickViewImage').src = p.img;
+  document.getElementById('quickViewName').textContent = p.name;
+  document.getElementById('quickViewDesc').textContent = p.desc;
+  document.getElementById('quickViewPrice').textContent = p.price;
+  document.getElementById('quickViewBuyBtn').onclick = function() {
+    closeQuickView();
+    openPurchaseModal(p.buyIdx);
+  };
+  document.getElementById('quickViewModal').style.display = 'flex';
+}
+function closeQuickView() {
+  document.getElementById('quickViewModal').style.display = 'none';
+}
+// Attach event listeners to quick-view buttons after DOM loads
+window.addEventListener('DOMContentLoaded', function() {
+  const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+  quickViewBtns.forEach(function(btn, idx) {
+    btn.onclick = function(e) {
+      e.preventDefault();
+      openQuickView(idx);
+    };
+  });
+});
+</script>
 </body>
 
 </html>
