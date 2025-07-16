@@ -2078,6 +2078,17 @@ address {
     }
 }
 
+@media (max-width: 1200px) {
+  .header-actions .cta-button {
+    display: none !important;
+  }
+}
+@media (min-width: 1201px) {
+  .header-actions .cta-button {
+    display: inline-block !important;
+  }
+}
+
 @media (max-width: 768px) {
      .header-container {
         padding: 1rem;
