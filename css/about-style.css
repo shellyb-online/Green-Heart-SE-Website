@@ -61,6 +61,13 @@ body {
   position: relative;
   z-index: 1;
   margin-top: 80px; /* Add top margin to account for fixed header */
+  margin-bottom: 2.5rem;
+}
+
+/* Optionally, also add to .section-white for extra space */
+.section-white {
+  margin-top: 0;
+  padding-top: 3rem;
 }
 
 /* Header */
@@ -366,6 +373,16 @@ body {
   }
 }
 @media (max-width: 768px) {
+  .about-hero {
+    margin-top: 60px; /* Adjust to match mobile header height */
+  }
+  .containers {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  html, body {
+    overflow-x: hidden;
+  }
   .hero-header {
     min-height: 180px;
     padding: 2.5rem 0;
